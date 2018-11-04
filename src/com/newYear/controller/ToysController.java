@@ -13,7 +13,7 @@ public class ToysController {
 
         NewYearTree newYearTree = new NewYearTree(1, "Шар", "Красный");
         NewYearTree newYearTree1 = new NewYearTree(2, "Гирлянда", "Красный");
-        NewYearTree newYearTree2 = new NewYearTree(3, "Гирлянда", "Красный");
+        NewYearTree newYearTree2 = new NewYearTree(3, "Гирлянда", "Розовый");
         NewYearTree newYearTree3 = new NewYearTree(4, "Звезда", "Золотой");
         NewYearTree newYearTree4 = new NewYearTree(5, "Шар", "Синий");
 
