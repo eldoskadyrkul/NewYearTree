@@ -2,10 +2,12 @@ package com.newYear.controller;
 
 import com.newYear.enum_pack.ColoursEnum;
 import com.newYear.models.NewYearToy;
+import com.newYear.models.NewYearToysName;
 import com.newYear.models.NewYearTree;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ToysController {
@@ -31,10 +33,22 @@ public class ToysController {
         NewYearTree elka2 = new NewYearTree();
         elka2.addToy(new NewYearToy(ColoursEnum.BLUE));
 
+        int numberOfRed = countNumbersRed(elka, ColoursEnum.RED);
+        System.out.println("Количество красных " + numberOfRed);
 
+        int numberOdBlue = countNumbersRed(elka2, ColoursEnum.BLUE);
+        System.out.println("Количество сини" + numberOdBlue);
 
+        // Collections.sort(toys);
 
+        Comparator<NewYearToysName> byNameComparator = new Comparator<NewYearToysName>() {
+            @Override
+            public int compare(NewYearToysName o1, NewYearToysName o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+        };
 
+        Collections.sort(elka.getToys(), byNameComparator);
     }
 
     public static int countNumbersRed(NewYearTree elkd, final ColoursEnum coloursEnum) {
