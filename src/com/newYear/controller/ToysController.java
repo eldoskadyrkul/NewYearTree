@@ -24,12 +24,7 @@ public class ToysController {
         newYearTrees.add(newYearTree3);
         newYearTrees.add(newYearTree4);
 
-        Collections.sort(newYearTrees, new Comparator<NewYearTree>() {
-            @Override
-            public int compare(NewYearTree o1, NewYearTree o2) {
-                return o2.getColor().compareTo(o1.getColor());
-            }
-        });
+        Collections.sort(newYearTrees, (o1, o2) -> o2.getColor().compareTo(o1.getColor()));
 
         System.out.println(newYearTrees);
 
