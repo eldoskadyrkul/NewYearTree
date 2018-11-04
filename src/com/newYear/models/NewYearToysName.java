@@ -2,7 +2,7 @@ package com.newYear.models;
 
 import com.newYear.enum_pack.ColoursEnum;
 
-public class NewYearToysName {
+public class NewYearToysName implements Comparable<NewYearToysName> {
 
     private ColoursEnum colour;
     private String name;
@@ -34,5 +34,10 @@ public class NewYearToysName {
                 "colour=" + colour +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(NewYearToysName o) {
+        return colour.toString().compareTo(o.colour.toString());
     }
 }
